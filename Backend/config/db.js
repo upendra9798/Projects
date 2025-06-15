@@ -1,7 +1,10 @@
 import mongoose from "mongoose";
 
+
+// Function to connect to MongoDB
 export const connectDB = async () => {
     try {
+        // Attempt to connect to MongoDB using the URI from environment variables
         const conn = await mongoose.connect(process.env.MONGO_URI)//connecting database
         console.log(`MongoDB connected: ${conn.connection.host}`);
 //If the connection is successful, this line logs a message to the console 

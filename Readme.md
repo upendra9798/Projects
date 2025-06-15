@@ -12,3 +12,6 @@
     API-> It connect user and database
     user sends a API reqest to database and can form,update,delete the product and send the response back to the client
 11. Forming Product route in server.js by using product model
+12. Used Postman to check if api is working and entered json data
+13. Used app.use(express.json()) to read the json data
+14. Formed delete route for deleting product from id
