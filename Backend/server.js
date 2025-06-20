@@ -8,6 +8,8 @@ import productRoutes from "./routes/product.routes.js";
 dotenv.config() //to read MONGO_URI without this it will show undefined
 
 const app = express()
+const PORT = process.env.PORT || 5000 //5000-written in case it is undefined in 
+//.env file
 
 // app.get("/", (req,res) => {  //for home page
 //     res.send("Server is ready")
@@ -20,7 +22,7 @@ app.use("/api/products",productRoutes)
 //It will differentiate by http methods(put,post,etc)
 
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     connectDB() //DB connection
-    console.log("Server started at http://localhost:5000");   
+    console.log("Server started at http://localhost:" + PORT);   
 })
