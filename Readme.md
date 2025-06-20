@@ -15,3 +15,5 @@
 12. Used Postman to check if api is working and entered json data
 13. Used app.use(express.json()) to read the json data
 14. Formed delete route for deleting product from id
+15. Update route, get all products route
+16. Made separate file for product controllers and routes
