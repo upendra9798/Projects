@@ -25,4 +25,8 @@
 
 :- FRONTEND
 
-1. 
+1. Frontend setup - npm create vite@latest
+2. install chakra ui (vite.config is different-from chatgpt)
+3. To have different pages in our website we used -> 
+ npm i react-router-dom
+4. Make App under BrowserRouter in main.jsx
