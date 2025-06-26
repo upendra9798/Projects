@@ -30,3 +30,20 @@
 3. To have different pages in our website we used -> 
  npm i react-router-dom
 4. Make App under BrowserRouter in main.jsx
+5. In App.js using react-router-dom :-  we created different pages
+6. Creating navbar first (npm i react-icons)
+7. Used useColorModeValue to toggle color
+8. Created CreatePage.jsx
+9. Tried console log data entered to see in console if our code is correct or not. Now we have to save this data toour database
+10. npm i zustand -> to make a global fn
+11. To not write http://localhost:5000/api/products, we created a proxy in viteconfig.js, so we have to only write /api/products
+
+Note: Getting error beacuse our frontend running on diff port and backen on diff
+  so we used CORS in backend server to remove error(make sure to use it every time)
+:- Also make sure to run backend and enable mongodB before sending req from frontend to backend otherwise it will show error
+( Failed to execute 'json' on 'Response': Unexpected end of JSON input
+    at createProduct (product.js:17:32)
+    at async handleAddProduct)
+
+12. Used Toaster to show notification menu when error or product creation(Use new syntax by seeing chakra ui website) 
+npx @chakra-ui/cli snippet add toaster
