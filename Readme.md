@@ -47,3 +47,6 @@ Note: Getting error beacuse our frontend running on diff port and backen on diff
 
 12. Used Toaster to show notification menu when error or product creation(Use new syntax by seeing chakra ui website) 
 npx @chakra-ui/cli snippet add toaster
+
+13. Creating Homepage to show all the products
+14. Formed product Card to map all the products

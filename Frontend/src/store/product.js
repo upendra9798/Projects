@@ -21,6 +21,12 @@ export const useProductStore = create((set) => ({
         // data  -> backen-controller-createProduct - we are setting
         //new product data to data
             return {success:true, message:"Product created sucessfully"}
+    },
+
+    fetchProducts: async () => {
+        const res = await fetch("/api/products")
+        const data = await res.json();
+        set({products: data.data})
     }
 }))
 //This is a global fn -> can be used in any other files
@@ -30,3 +36,6 @@ export const useProductStore = create((set) => ({
 //It's like :
 // const [product, setProduct] = usestate()
 //but this is a local fn can only be used in a file
+
+
+ 
