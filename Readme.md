@@ -50,3 +50,11 @@ npx @chakra-ui/cli snippet add toaster
 
 13. Creating Homepage to show all the products
 14. Formed product Card to map all the products
+
+Note:- 1. Solved error of not visible image-> It is because i am sending a web link not image address
+2.Icon of edit, delete not visible from IconButton fn so used under box
+3.delet fn not working due to change in name of deleteProducts in store and Product card(extra s in store)
+4.In homepage wrote column instead of columns
+
+15. To update the data used drawer(not modal) from chakra UI(changed version), changed code of edit, delete icon to fit in 
+drawer code so that it works on clicking edit icon and used toaster on delet

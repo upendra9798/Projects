@@ -1,5 +1,5 @@
 import { Box, Button, Container, Heading, Input, VStack } from '@chakra-ui/react';
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useColorModeValue,} from "@/components/ui/color-mode"
 import { useProductStore } from '../store/product';
 import { toaster } from "@/components/ui/toaster"
