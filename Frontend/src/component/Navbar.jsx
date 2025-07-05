@@ -32,9 +32,9 @@ const Navbar = () => {
 </Text>
 
 
-                <HStack spacing={2} alignItems={"center"}>
+                <HStack  alignItems={"center"}>
                     <Link to={"/create"}>
-                       <Button>
+                       <Button mx={3}>
                          <CiSquarePlus fontSize={20}/>
                        </Button>
 

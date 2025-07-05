@@ -23,12 +23,26 @@ export const useProductStore = create((set) => ({
             return {success:true, message:"Product created sucessfully"}
     },
 
-    fetchProducts: async () => {
-        const res = await fetch("/api/products")
-        const data = await res.json();
-        set({products: data.data})
-    },
+   fetchProducts: async () => {
+  try {
+    // 🕒 Add a short delay to prevent race with backend during Vite HMR
+    await new Promise((resolve) => setTimeout(resolve, 300));
 
+    const res = await fetch("/api/products");
+
+    if (!res.ok) {
+      throw new Error(`Server error: ${res.status}`);
+    }
+
+    const data = await res.json();
+    set({ products: data.data });
+  } catch (err) {
+    console.error("❌ fetchProducts failed:", err.message);
+    set({ products: [] }); // optional: reset products on error
+  }
+},
+
+    //pid - product id
     deleteProduct: async (pid) => {
         const res = await fetch(`/api/products/${pid}`, {
             method: "DELETE"
@@ -60,11 +74,12 @@ export const useProductStore = create((set) => ({
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(updatedProduct)
+            body: JSON.stringify(updatedProduct) //Passes updatedProduct as a JSON body
         });
         const data = await res.json();
         if(!data.success) return {success:false, message:data.message}
 
+        //update data without refreshing the page    
         set(state => ({
             products: state.products.map(product => 
                 product._id === pid ? {...product, ...updatedProduct} : product

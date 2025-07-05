@@ -44,6 +44,7 @@ Note: Getting error beacuse our frontend running on diff port and backen on diff
 ( Failed to execute 'json' on 'Response': Unexpected end of JSON input
     at createProduct (product.js:17:32)
     at async handleAddProduct)
+// Also try to run backend again after frontend or connecting mongodb
 
 12. Used Toaster to show notification menu when error or product creation(Use new syntax by seeing chakra ui website) 
 npx @chakra-ui/cli snippet add toaster
@@ -57,4 +58,6 @@ Note:- 1. Solved error of not visible image-> It is because i am sending a web l
 4.In homepage wrote column instead of columns
 
 15. To update the data used drawer(not modal) from chakra UI(changed version), changed code of edit, delete icon to fit in 
-drawer code so that it works on clicking edit icon and used toaster on delet
+drawer code so that it works on clicking edit icon and used toaster on delete
+
+Note :- spacing doesn't work now so use margin instead
